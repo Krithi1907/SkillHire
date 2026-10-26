@@ -32,7 +32,7 @@ app.use("/api/reports", reportRoutes);
 app.use("/api/admin", adminRoutes);
 
 // Health check endpoint
-app.get("/", (req, res) => {
+app.get(["/", "/api"], (req, res) => {
   res.json({
     name: "SkillHire API",
     status: "online",
